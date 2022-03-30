@@ -1,0 +1,25 @@
+project_id: black-stream-292507
+keyPath: #crendentials for service account
+ethereum:
+  chain: eth_ropsten
+  endpoint: # Fetched from GCP Secret Manager
+  confirmations: 11 # + 1 (current block)
+  gas_station: "0x8271B69027B367AA3231076f6A0CD90cf55BfD8B"
+  currencies:
+    - name: ETH
+      decimals: 18
+    - name: USDC
+      decimals: 18 # Yushi's dummy contract has 18 decimals
+      address: "0x5329DF8fD2a83fDD88c43b03754517fA169D961F"
+      transfer_signature: "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+    - name: USDT
+      decimals: 18 # Yushi's dummy contract has 18 decimals
+      address: "0xc7F4cd69e4C721146CA5DdE5e0d43Fc36F4b82De"
+      transfer_signature: "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+bitcoin:
+  chain: btc_test3
+  endpoint: https://blockchain.info
+  confirmations: 2 # + 1 (current block)
+  currencies:
+    - name: BTC
+      decimals: 9

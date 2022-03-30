@@ -1,0 +1,25 @@
+project_id: soteria-production
+keyPath: #crendentials for service account
+ethereum:
+  chain: eth_main
+  endpoint: # Fetched from GCP Secret Manager
+  confirmations: 11 # + 1 (current block)
+  gas_station: "0x3a04e6969E767208A173E78305cBfd648A9e131B"
+  currencies:
+    - name: ETH
+      decimals: 18
+    - name: USDC
+      decimals: 6
+      address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+      transfer_signature: "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+    - name: USDT
+      decimals: 6
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+      transfer_signature: "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+bitcoin:
+  chain: btc_main
+  endpoint: https://blockchain.info
+  confirmations: 2 # + 1 (current block)
+  currencies:
+    - name: BTC
+      decimals: 9
